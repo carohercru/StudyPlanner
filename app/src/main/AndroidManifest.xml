@@ -10,18 +10,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.StudyPlanner">
+        android:theme="@style/Theme.StudyPlanner"
+        tools:targetApi="31">
+
+        <!-- Pantalla principal de inicio (para pruebas del perfil) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".ProfileActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.StudyPlanner">
+            android:label="Perfil de usuario">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Otras actividades (sin intent-filter) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="Iniciar sesión" />
+
     </application>
 
 </manifest>
+
+
